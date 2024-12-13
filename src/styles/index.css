@@ -25,7 +25,6 @@
 }
 
 .delete-button {
-    display: none;
     background: none;
     border: none;
     color: #ff4d4d;
@@ -36,3 +35,43 @@
 .todo-item.show-delete .delete-button {
     display: inline;
 }
+
+.add-task-button {
+    background-color: #4caf50; /* Verde para añadir */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .add-task-button:hover {
+    background-color: #388e3c; /* Verde más oscuro al pasar el cursor */
+    transform: scale(1.1); /* Efecto de crecimiento al pasar el mouse */
+  }
+  
+  .add-task-button:active {
+    background-color: #2c6c32; /* Verde aún más oscuro al hacer clic */
+  }
+
+  .delete-all {
+    background-color: #ff9800; /* Naranja para eliminar todas */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .delete-all:hover {
+    background-color: #fb8c00; /* Naranja más oscuro al pasar el cursor */
+    transform: scale(1.1); /* Efecto de crecimiento al pasar el mouse */
+  }
+  
+  .delete-all:active {
+    background-color: #e65100; /* Naranja aún más oscuro al hacer clic */
+  }
