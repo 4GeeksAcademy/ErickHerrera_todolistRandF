@@ -12,7 +12,7 @@ const Todorandf = () => {
     })
       .then((response) => {
         if (response.status === 404) {
-          crearUsuario(); // Si no existe, crea el usuario
+          crearUsuario(); 
         }
         return response.json();
       })
@@ -36,7 +36,7 @@ const Todorandf = () => {
       .then((response) => {
         if (response.ok) {
           console.log("Usuario creado exitosamente");
-          obtenerTodolist(); // Llama de nuevo a la función para obtener los datos actualizados
+          obtenerTodolist(); 
         } else {
           console.log("Error al crear el usuario");
         }
@@ -63,8 +63,8 @@ const Todorandf = () => {
       .then((response) => {
         if (response.ok) {
           console.log("Tarea añadida exitosamente");
-          obtenerTodolist(); // Actualiza la lista de tareas después de agregar una nueva
-          setNuevaTarea(""); // Limpia el input
+          obtenerTodolist(); 
+          setNuevaTarea(""); 
         } else {
           response.json().then((data) => console.log("Error:", data));
         }
@@ -79,7 +79,7 @@ const Todorandf = () => {
     })
       .then((response) => {
         if (response.ok) {
-          setTodo(todo.filter((item) => item.id !== id)); // Filtra la tarea eliminada del estado
+          setTodo(todo.filter((item) => item.id !== id)); 
           console.log("Tarea eliminada con éxito");
         } else {
           console.log("Error al eliminar la tarea");
@@ -96,7 +96,7 @@ const Todorandf = () => {
       .then((response) => {
         if (response.ok) {
           console.log("Usuario eliminado con éxito, recreando...");
-          crearUsuario(); // Vuelve a crear al usuario con una lista vacía de tareas
+          crearUsuario(); 
         } else {
           console.log("Error al eliminar el usuario");
         }
@@ -116,7 +116,7 @@ const Todorandf = () => {
             {item.label}
             <button
               className="delete-button"
-              onClick={() => eliminarTarea(item.id)} // Eliminar tarea al hacer clic
+              onClick={() => eliminarTarea(item.id)} 
             >
               ❌
             </button>
